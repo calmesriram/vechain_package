@@ -3,13 +3,12 @@ const { Driver, SimpleNet, SimpleWallet, options } =require('@vechain/connex.dri
 const wallet = new SimpleWallet()
 var connex;
 connexfun();
-async function connexfun(){
+async function connexfun() {
     const value = await Driver.connect(new SimpleNet('https://sync-testnet.vechain.org'),wallet);
     console.log(value);
 
     connex = new Framework(value);
     console.log(connex)
 }
-
-
-module.exports = connexfun;
+// connexfun();
+module.exports.connexfun = connexfun;
